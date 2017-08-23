@@ -1,15 +1,16 @@
 public class Calentador
 {
-    int temperatura=15;
+    private int temperatura=15; // Variables de instancia
+    private int incremento=3;
     
-    public  void calentar()
+    public  void calentar() // Constructor
     {
-        temperatura=temperatura+5;
+        temperatura=temperatura+3;
     }
     
-    public void enfriar()
+    public void enfriar() // Constructor
     {
-        temperatura=temperatura-5;
+        temperatura=temperatura-3;
     }
     
     int mostrarTemperatura()
