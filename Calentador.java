@@ -5,12 +5,19 @@ public class Calentador
     
     public  void calentar() // Constructor
     {
-        temperatura=temperatura+3;
+        if(temperatura<30)
+        {
+            temperatura=temperatura+incremento;
+        }
     }
     
     public void enfriar() // Constructor
     {
-        temperatura=temperatura-3;
+        if(temperatura>-10)
+        {
+            temperatura=temperatura-5;
+        }
+        
     }
     
     int mostrarTemperatura()
