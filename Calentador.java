@@ -1,11 +1,19 @@
 public class Calentador
 {
-    private int temperatura=15; // Variables de instancia
-    private int incremento=3;
+    private int temperatura; // Variables de instancia
+    private int incremento;
+    private int max;
+    private int min;
     
-    public  void calentar() // Constructor
+    private Calentador(int tempMax,int tempMin) // Constructor
     {
-        if(temperatura<30)
+        max=tempMax;
+        min=tempMin;
+    }
+    
+    public  void calentar() // Metodo
+    {
+        if(temperatura<max)
         {
             temperatura=temperatura+incremento;
         }
@@ -13,7 +21,7 @@ public class Calentador
     
     public void enfriar() // Constructor
     {
-        if(temperatura>-10)
+        if(temperatura>min)
         {
             temperatura=temperatura-5;
         }
