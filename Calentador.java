@@ -5,10 +5,12 @@ public class Calentador
     private int max;
     private int min;
     
-    private Calentador(int tempMax,int tempMin) // Constructor
+    public Calentador(int tempMax,int tempMin) // Constructor
     {
         max=tempMax;
         min=tempMin;
+        incremento=3;
+        temperatura=15;
     }
     
     public  void calentar() // Metodo
@@ -16,6 +18,10 @@ public class Calentador
         if(temperatura<max)
         {
             temperatura=temperatura+incremento;
+            if(temperatura>max)
+            {
+                temperatura=temperatura-incremento;
+            }
         }
     }
     
@@ -24,12 +30,29 @@ public class Calentador
         if(temperatura>min)
         {
             temperatura=temperatura-5;
+            if(temperatura<min)
+            {
+                temperatura=temperatura+5;
+            }
         }
         
     }
     
-    int mostrarTemperatura()
+    public int mostrarTemperatura() // Acceso
     {
         return(temperatura);
     }
+    
+    public void modificarIncremento(int increMod) // Constructor
+    {
+        if(increMod<0)
+        {
+         incremento=0;
+        }
+        else
+        {
+            incremento=increMod;
+        }
+    }
+    
 }
